@@ -1,5 +1,9 @@
-import NavigationBar from "../components/NavigationBar";
+import BaguetteCard from "../components/BaguetteCard";
 
 export default function About() {
-  return <></>;
+  return (
+    <>
+      <BaguetteCard />
+    </>
+  );
 }

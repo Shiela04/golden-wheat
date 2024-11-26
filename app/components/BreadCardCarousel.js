@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import SourdoughBreadCard from './SourdoughBreadCard';
-import WholeWheatCard from './WholeWheatCard';
-import BaguetteCard from './BaguetteCard';
-import CiabattaCard from './CiabattaCard';
-import RyeBreadCard from './RyeBreadCard';
-import MultigrainCard from './MultigrainCard';
+import { useState } from "react";
+import SourdoughBreadCard from "./SourdoughBreadCard";
+import WholeWheatCard from "./WholeWheatCard";
+import BaguetteCard from "./BaguetteCard";
+import CiabattaCard from "./CiabattaCard";
+import RyeBreadCard from "./RyeBreadCard";
+import MultigrainCard from "./MultigrainCard";
 
 export default function BreadCardCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);

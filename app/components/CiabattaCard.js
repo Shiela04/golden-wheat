@@ -1,4 +1,4 @@
-import WishListButton from './WishListButton';
+import WishListButton from "./WishListButton";
 
 export default function CiabattaCard() {
   return (
