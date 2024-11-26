@@ -1,22 +1,21 @@
+import AlmondCroissantProductCard from "../components/AlmondCroissantProductCard";
 import BreadProductCard from "../components/BreadProductCard";
 import BriocheBunProductCard from "../components/BriocheBunProductCard";
 import ChelseaBunProductCard from "../components/ChelseaBunProductCard";
 import CiabattaProductCard from "../components/CiabattaProductCard";
 import CinnamonBunsProductCard from "../components/CinnamonBunsProductCard";
-import CreamPuffProductCard from "../components/CreamPuffProductCard";
 import CroissantProductCard from "../components/CroissantsProductCard";
+import DanishPastryProductCard from "../components/DanishPastryProductCard";
 import DinnerRollProductCard from "../components/DinnerRollsProductCard";
-import EclairsProductCard from "../components/EclairsProductCard";
 import HamburgerBunProductCard from "../components/HamburgerBunProductCard";
 import HotCrossBunProductCard from "../components/HotCrossBunProductCard";
 import HotDogBunsProductCard from "../components/HotDogBunProductCard";
-import MilleFeuileProductCard from "../components/MilleFeuileProductCard";
 import MultigrainProductCard from "../components/MultigrainProductCard";
+import PainAuChocolatProductCard from "../components/PainAuChocolatProductCard";
 import RyeBreadProductCard from "../components/RyeBreadProductCard";
 import SourdoughBreadProductCard from "../components/SourdoughBreadProductCard";
 import StickyBunProductCard from "../components/StickyBunProductCard";
 import WholeWheatProductCard from "../components/WholeWheatProductCard";
-import ZeppoleProductCard from "../components/ZeppoleProductCard";
 
 export default function Card() {
   return (
@@ -58,11 +57,9 @@ export default function Card() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
         {/* // pastries 3x3 Grid Section */}
         <CroissantProductCard />
-        <ZeppoleProductCard />
-        <CreamPuffProductCard />
-        <EclairsProductCard />
-        <CinnamonBunsProductCard />
-        <MilleFeuileProductCard />
+        <PainAuChocolatProductCard />
+        <AlmondCroissantProductCard />
+        <DanishPastryProductCard />
       </div>
 
       <div>

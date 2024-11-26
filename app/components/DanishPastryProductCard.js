@@ -1,12 +1,12 @@
 import WishListButton from "./WishListButton";
 
-export default function EclairsProductCard() {
+export default function DanishPastryProductCard() {
   return (
     <div className="max-w-sm mx-auto bg-card-background border border-black rounded-lg shadow-lg overflow-hidden">
       {/* {card image} */}
       <img
         className="w-full h-48 object-cover"
-        src="images/eclairs.jpg"
+        src="images/danish-pastry.jpg"
         alt="logo"
       />
 
@@ -14,7 +14,7 @@ export default function EclairsProductCard() {
       <div className="p-4 my-1">
         <div className="flex flex-row justify-between items-center">
           {/* title */}
-          <h2 className="text-2xl font-semibold text-white">Eclairs</h2>
+          <h2 className="text-2xl font-semibold text-white">Danish Pastry</h2>
 
           {/* heart button */}
           <WishListButton />
@@ -23,10 +23,10 @@ export default function EclairsProductCard() {
         {/* description */}
         <div className="flex flex-col justify-start p-2 bg-card-beige rounded-lg mt-4">
           <p className="mt-2 text-black text-base">
-            A classic French pastry with a crisp, golden exterior. Made from
-            choux dough, éclairs are filled with rich pastry cream and topped
-            with a glossy layer of chocolate. Light and indulgent, they are a
-            timeless treat enjoyed as a dessert or snack.
+            A sweet, buttery pastry with a light, flaky texture. Made from
+            laminated dough, Danish pastries are often filled with fruit, cream
+            cheese, or almond paste. Baked to a golden perfection, they offer a
+            rich, indulgent treat thats perfect for breakfast or dessert.
           </p>
 
           {/* View Details button */}

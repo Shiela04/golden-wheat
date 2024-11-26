@@ -1,12 +1,12 @@
 import WishListButton from "./WishListButton";
 
-export default function ZeppoleProductCard() {
+export default function PainAuChocolatProductCard() {
   return (
     <div className="max-w-sm mx-auto bg-card-background border border-black rounded-lg shadow-lg overflow-hidden">
       {/* {card image} */}
       <img
         className="w-full h-48 object-cover"
-        src="images/zeppole.jpg"
+        src="images/pain-au-chocolat.jpg"
         alt="logo"
       />
 
@@ -14,7 +14,9 @@ export default function ZeppoleProductCard() {
       <div className="p-4 my-1">
         <div className="flex flex-row justify-between items-center">
           {/* title */}
-          <h2 className="text-2xl font-semibold text-white">Zeppole</h2>
+          <h2 className="text-2xl font-semibold text-white">
+            Pain Au Chocolat
+          </h2>
 
           {/* heart button */}
           <WishListButton />
@@ -23,11 +25,11 @@ export default function ZeppoleProductCard() {
         {/* description */}
         <div className="flex flex-col justify-start p-2 bg-card-beige rounded-lg mt-4">
           <p className="mt-2 text-black text-base">
-            A traditional Italian pastry with a light, fluffy texture. Made from
-            choux pastry, zeppole are fried until golden and crispy, then dusted
-            with powdered sugar. Often filled with custard or cream, they are a
-            popular treat, especially during festive occasions like St. Joseph
-            Day.
+            A flaky, buttery pastry with a rich, chocolate-filled center. Made
+            from laminated dough, pain au chocolat is baked to a golden, crisp
+            perfection. Its light, airy texture and indulgent chocolate filling
+            make it a classic French treat, perfect for breakfast or a sweet
+            snack.
           </p>
 
           {/* Read More button */}
