@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import ShoppingListButton from './ShoppingListButton';
-import WishListButton from './WishListButton';
-import ProfileButton from './ProfileButton';
-import Logo from './Logo';
+import { useState } from "react";
+import ShoppingListButton from "./ShoppingListButton";
+import WishListButton from "./WishListButton";
+import ProfileButton from "./ProfileButton";
+import Logo from "./Logo";
+import { NavListItem } from "./NavListItem";
 
 export default function NavigationBar() {
   // state to manage mobile menu visibility
@@ -51,7 +52,8 @@ export default function NavigationBar() {
           </div>
           <div className="flex flex-1 items-center justify-center sm:justify-start">
             <Logo />
-            <div className="hidden sm:ml-6 sm:block">
+            <NavListItem />
+            {/* <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4 items-center">
                 <a
                   href="#"
@@ -79,7 +81,7 @@ export default function NavigationBar() {
                   Contact
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <ShoppingListButton />
