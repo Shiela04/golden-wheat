@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export default function WishListButton() {
   return (
     <button
@@ -9,7 +10,7 @@ export default function WishListButton() {
       <img
         className="size-8 rounded-full"
         src="images/wishlist.png"
-        alt="log in"
+        alt="white heart"
       />
     </button>
   );

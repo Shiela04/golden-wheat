@@ -1,4 +1,5 @@
-import WishListButton from './WishListButton';
+/* eslint-disable @next/next/no-img-element */
+import WishListButton from "./WishListButton";
 
 export default function CiabattaCard() {
   return (
@@ -7,7 +8,7 @@ export default function CiabattaCard() {
       <img
         className="w-full h-48 object-cover"
         src="images/ciabatta.jpg"
-        alt="logo"
+        alt="ciabatta"
       />
 
       {/* contents */}

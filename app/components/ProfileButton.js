@@ -1,6 +1,7 @@
-'use client';
+/* eslint-disable @next/next/no-img-element */
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function ProfileButton() {
   // state to manage profile menu visibility
@@ -27,7 +28,7 @@ export default function ProfileButton() {
           <img
             className="size-12 rounded-full"
             src="images/login.png"
-            alt="log in"
+            alt="profile avatar"
           />
         </button>
       </div>

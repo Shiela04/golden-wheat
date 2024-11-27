@@ -1,4 +1,5 @@
-import WishListButton from './WishListButton';
+/* eslint-disable @next/next/no-img-element */
+import WishListButton from "./WishListButton";
 
 export default function SourdoughBreadCard() {
   return (
@@ -7,7 +8,7 @@ export default function SourdoughBreadCard() {
       <img
         className="w-full h-48 object-cover"
         src="images/sourdough-bread.jpg"
-        alt="logo"
+        alt="sourdough"
       />
 
       {/* contents */}

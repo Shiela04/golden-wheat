@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export default function HeroSection() {
   return (
     <div className="flex flex-col sm:flex-col md:flex-row w-auto lg:flex-row">
@@ -5,6 +6,7 @@ export default function HeroSection() {
         <img
           className="w-full h-full object-cover"
           src="images/whole-wheat-bread.jpg"
+          alt="whole wheat"
         />
       </div>
       <div className="flex-1 grow text-black bg-card-beige flex flex-col justify-center items-center p-4 gap-4">

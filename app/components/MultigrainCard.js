@@ -1,4 +1,5 @@
-import WishListButton from './WishListButton';
+/* eslint-disable @next/next/no-img-element */
+import WishListButton from "./WishListButton";
 
 export default function MultigrainCard() {
   return (
@@ -7,7 +8,7 @@ export default function MultigrainCard() {
       <img
         className="w-full h-48 object-cover"
         src="images/multigrain.jpg"
-        alt="logo"
+        alt="multigrain"
       />
 
       {/* contents */}

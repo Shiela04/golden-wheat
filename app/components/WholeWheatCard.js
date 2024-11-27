@@ -1,4 +1,5 @@
-import WishListButton from './WishListButton';
+/* eslint-disable @next/next/no-img-element */
+import WishListButton from "./WishListButton";
 
 export default function WholeWheatCard() {
   return (
@@ -7,7 +8,7 @@ export default function WholeWheatCard() {
       <img
         className="w-full h-48 object-cover"
         src="images/whole-wheat-bread.jpg"
-        alt="logo"
+        alt="whole wheat"
       />
 
       {/* contents */}
