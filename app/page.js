@@ -7,6 +7,7 @@ export default function Home() {
     <div className="bg-page-bg">
       <HeroSection />
       <CardCarousel />
+      <h1></h1>
     </div>
   );
 }
