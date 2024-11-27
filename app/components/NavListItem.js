@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import { HEADER_DETAILS } from "@/config/static-data";
 
-export function NavListItem() {
+export default function NavListItem() {
   const listItems = HEADER_DETAILS.navMenu.map((item) => (
     <ui key={uuidv4()}>
       <a href={item.navUrl}>{item.navText}</a>
