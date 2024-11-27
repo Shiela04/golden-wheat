@@ -1,4 +1,3 @@
-import BreadCardCarousel from "./components/BreadCardCarousel";
 import HeroSection from "./components/HeroSection";
 import CardCarousel from "./components/CardCarousel";
 
