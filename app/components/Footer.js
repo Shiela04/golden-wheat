@@ -1,3 +1,5 @@
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 export default function Footer() {
   return (
     <footer className="bg-[#d2b49c] text-black">
