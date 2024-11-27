@@ -121,7 +121,7 @@ export default function CardCarousel() {
                     alt={card.title}
                     className="w-full h-40 object-cover"
                   />
-                  <div className="flex-1 p-2 flex flex-col justify-between">
+                  <div className="p-2 flex flex-col justify-between">
                     <h3 className="text-xl font-bold text-white">
                       {card.title}
                     </h3>

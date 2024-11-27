@@ -13,7 +13,7 @@ export default function HeroSection() {
         <h1 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl xlg:text-5xl font-extrabold py-2">
           Delicious Recipes
         </h1>
-        <p className="text-lg sm:text-xl md:text-base max-w-3xl mx-auto">
+        <p className="text-lg sm:text-xl md:text-base max-w-3xl mx-auto lg:text-xl">
           Indulge in the goodness of freshly baked bread, made with the finest
           whole wheat flour. Our bakery brings you a variety of delicious
           recipes crafted with love and care, offering a perfect balance of

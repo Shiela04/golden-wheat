@@ -26,7 +26,7 @@ export default function CiabattaCard() {
           <p className="mt-2 text-black text-base">
             Italian bread with a light, airy texture. The name ciabatta means
             slipper in Italian, referring to its shape resembling a worn-out
-            slipper.
+            slipper commonly enjoyed with meals.
           </p>
 
           {/* Read More button */}
