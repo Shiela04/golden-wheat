@@ -5,7 +5,7 @@ import ShoppingListButton from "./ShoppingListButton";
 import WishListButton from "./WishListButton";
 import ProfileButton from "./ProfileButton";
 import Logo from "./Logo";
-import { NavListItem } from "./NavListItem";
+import NavListItem from "./NavListItem";
 
 export default function NavigationBar() {
   // state to manage mobile menu visibility

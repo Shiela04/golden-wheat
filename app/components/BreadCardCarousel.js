@@ -37,7 +37,7 @@ export default function BreadCardCarousel() {
   return (
     <div className="relative my-4 overflow-hidden w-full">
       {/* {carousel wrapper} */}
-      <div className="flex gap-2 transition-transform duration-300 ease-in-out">
+      <div className="flex px-12 gap-2 transition-transform duration-300 ease-in-out">
         {/* {render teh cards} */}
         {visibleCards.map((card, index) => (
           <div
