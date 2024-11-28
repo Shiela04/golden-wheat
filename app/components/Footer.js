@@ -50,7 +50,9 @@ export default function Footer() {
               <span>100% Organic</span>
             </h3>
             <p className="mt-2 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              At The Golden Wheat Bakery, we’re committed to using 100% organic
+              ingredients in all our baked goods, ensuring quality,
+              sustainability, and a healthier option for our customers.
             </p>
           </div>
           <div>
@@ -59,7 +61,8 @@ export default function Footer() {
               <span>Handmade</span>
             </h3>
             <p className="mt-2 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              At The Golden Wheat Bakery, all our products are handmade with
+              care, ensuring every bite is crafted to perfection.
             </p>
           </div>
         </div>
@@ -71,7 +74,9 @@ export default function Footer() {
               <span>About Us</span>
             </h3>
             <p className="mt-2 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              The Golden Wheat Bakery is dedicated to crafting delicious,
+              handmade baked goods with love and care, using only the finest
+              organic ingredients.
             </p>
           </div>
           <div>
@@ -80,7 +85,8 @@ export default function Footer() {
               <span>Our Products</span>
             </h3>
             <p className="mt-2 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Our products are made with the finest 100% organic ingredients,
+              ensuring quality and flavor in every bite.
             </p>
           </div>
         </div>
