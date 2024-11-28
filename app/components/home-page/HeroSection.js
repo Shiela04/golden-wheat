@@ -3,7 +3,7 @@ import Link from "next/link";
 /* eslint-disable @next/next/no-img-element */
 export default function HeroSection() {
   return (
-    <div className="flex flex-col md:flex-row items-stretch h-screen">
+    <div className="flex flex-col md:flex-row items-stretch h-[70vh]">
       <div className="md:w-3/5 md:h-full w-full mb-0 lg:w-2/3 items-center justify-center h-full">
         <img
           className="w-full h-full object-cover"
