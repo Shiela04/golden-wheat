@@ -21,13 +21,13 @@ export default function Card() {
   return (
     <div className="p-4">
       {/* // Header section */}
-      <h1 className="text-5xl font-bold text-center mb-6">
+      <h1 className="mb-6 text-5xl font-bold text-center">
         Delicious Bakery Products
       </h1>
 
       {/* // Short description for Product section */}
       <div className="px-96">
-        <p className="text-md text-center mb-6 font-semibold">
+        <p className="mb-6 font-semibold text-center text-md">
           Welcome to Our Bakery! Discover the joy of freshly baked bread,
           pastries, and buns, made with love and the finest ingredients. From
           everyday essentials to special treats, every bite is crafted to
@@ -40,21 +40,21 @@ export default function Card() {
       </div>
 
       {/* // Bread 3x3 Grid Section  */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 p-4">
+      <div className="grid grid-cols-1 gap-10 p-4 sm:grid-cols-2 md:grid-cols-3">
         {/* // Bread */}
-        <BreadProductCard />
-        <CiabattaProductCard />
-        <MultigrainProductCard />
-        <RyeBreadProductCard />
         <SourdoughBreadProductCard />
         <WholeWheatProductCard />
+        <BreadProductCard />
+        <CiabattaProductCard />
+        <RyeBreadProductCard />
+        <MultigrainProductCard />
       </div>
 
       <div>
-        <h2 className="text-4xl font-bold text-center py-16">Pastries</h2>
+        <h2 className="py-16 text-4xl font-bold text-center">Pastries</h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 p-4">
+      <div className="grid grid-cols-1 gap-10 p-4 sm:grid-cols-2 md:grid-cols-3">
         {/* // pastries 3x3 Grid Section */}
         <CroissantProductCard />
         <PainAuChocolatProductCard />
@@ -63,10 +63,10 @@ export default function Card() {
       </div>
 
       <div>
-        <h2 className="text-4xl font-bold text-center py-16">Buns</h2>
+        <h2 className="py-16 text-4xl font-bold text-center">Buns</h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 p-4">
+      <div className="grid grid-cols-1 gap-10 p-4 sm:grid-cols-2 md:grid-cols-3">
         {/* // Buns 3x3 Grid Section */}
         <DinnerRollProductCard />
         <HamburgerBunProductCard />
