@@ -36,7 +36,7 @@ export default function PainAuChocolatProductCard() {
           <button className="mt-2 text-sm text-left text-custom-red font-semibold hover:text-blue-800 focus:outline-none">
             View Details...
           </button>
-          <p className="text-yellow-500 font-bold text-xl">$420.69</p>
+          <p className="text-black font-bold text-xl">$3.00</p>
         </div>
       </div>
     </div>
