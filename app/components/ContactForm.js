@@ -107,7 +107,7 @@ export default function ContactForm() {
     // setEmail('');
     // setQuestion('');
 
-    setTimeout(() => setShowPopUp(false), 7000); // Popup will disapear after a couple of seconds if user does not close it
+    setTimeout(() => setShowPopUp(false), 3000); // Popup will disapear after a couple of seconds if user does not close it
   };
 
   return (

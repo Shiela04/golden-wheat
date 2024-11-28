@@ -1,39 +1,205 @@
-/* eslint-disable @next/next/no-img-element */
-import WishListButton from "./WishListButton";
+"use client";
 
-export default function MultigrainCard() {
+import { useState } from "react";
+
+export default function RegistrationForm() {
+  // Add state for username and usernameErrorText
+  const [userName, setUserName] = useState("");
+  const [userNameErrorText, setUserNameErrorText] = useState("");
+
+  // Add state for password and passwordErrortext
+  const [password, setPassword] = useState("");
+  const [passwordErrorText, setPasswordErrorText] = useState("");
+
+  // Extra - add state for email and emailErrorText
+  const [email, setEmail] = useState("");
+  const [emailErrorText, setEmailErrorText] = useState("");
+
+  // Add state for isFormValid
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  // Add function to validateForm
+  const validateForm = () => {
+    const userNameValidatity = userName.length >= 3;
+    const passwordValidity = password.length >= 8;
+    const emailValidatity = email.length === 0 || /\S+@\S+\.\S+/.test(email);
+
+    setIsFormValid(userNameValidatity && passwordValidity && emailValidatity);
+  };
+
+  // Add function to validate username
+  const validateUserName = (value) => {
+    if (value.length === 0) {
+      setUserNameErrorText("Name is required");
+    } else if (value.length > 0 && value.length < 3) {
+      setUserNameErrorText(
+        "Name must be greater then or equal to 3 characters"
+      );
+    } else {
+      setUserNameErrorText("");
+    }
+    validateForm();
+  };
+
+  // Add function to validate password
+  const validatePassword = (value) => {
+    if (value.length === 0) {
+      setPasswordErrorText("Password is required");
+    } else if (value.length > 0 && value.length < 8) {
+      setPasswordErrorText(
+        "Password must be greater then or equal to 8 characters"
+      );
+    } else {
+      setPasswordErrorText("");
+    }
+    validateForm();
+  };
+
+  // Extra add function to validate email
+  const validateEmail = (value) => {
+    if (value.length > 0 && !/\S+@\S+\.\S+/.test(value)) {
+      setEmailErrorText("Email must be a valid email address");
+    } else {
+      setEmailErrorText("");
+    }
+    validateForm();
+  };
+
+  // Add function to handle username change
+  const handleUsernameChange = (e) => {
+    const value = e.target.value;
+    setUserName(value);
+    validateUserName(value);
+  };
+
+  // Add function to handle password change
+  const handlePasswordChange = (e) => {
+    const value = e.target.value;
+    setPassword(value);
+    validatePassword(value);
+  };
+
+  // Extra - Add function to handle email value change
+  const handleEmail = (e) => {
+    const value = e.target.value;
+    setEmail(value);
+    validateEmail(value);
+  };
+
+  // Create a handleSubmitFunction
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      validateForm();
+      const response = await fetch("http://localhost:4000/user/login", {
+        method: "POST",
+        body: JSON.stringify({
+          email: "ethan456@goldenbakery.ca",
+          password: "password12345",
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      console.log("response", response);
+      const responsedata = await response.json();
+      console.log("data", responsedata);
+    } catch (error) {
+      console.error("Erorr fethcing data");
+    }
+  };
+
   return (
-    <div className="max-w-sm mx-auto overflow-hidden border border-black rounded-lg shadow-lg bg-card-background">
-      {/* {card image} */}
-      <img
-        className="object-cover w-full h-48"
-        src="/images/multigrain.jpg"
-        alt="multigrain"
-      />
+    <div className="flex items-center justify-center min-h-screen p-4 text-white bg-black">
+      <div className="flex flex-wrap justify-center w-full gap-8 lg:flex-nowrap">
+        {/* Form Section */}
+        <div className="w-full max-w-md p-6 bg-gray-800 rounded-lg shadow-lg">
+          <h1 className="mb-6 text-2xl font-bold text-center text-blue-500">
+            Log In
+          </h1>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label htmlFor="username" className="block mb-2 font-semibold">
+                Username:
+              </label>
+              <input
+                type="text"
+                id="username"
+                value={userName}
+                className={`w-full p-2 bg-gray-900 text-white border rounded focus:outline-none focus:ring focus:ring-blue-500
+                  ${
+                    userNameErrorText
+                      ? "border-red-500"
+                      : userName && !userNameErrorText
+                      ? "border-green-500"
+                      : "border-gray-700"
+                  }`}
+                onChange={handleUsernameChange}
+              />
+              {userNameErrorText && (
+                <p className="mt-2 text-sm text-red-500">{userNameErrorText}</p>
+              )}
+            </div>
 
-      {/* contents */}
-      <div className="p-4 my-1">
-        <div className="flex flex-row items-center justify-between">
-          {/* title */}
-          <h2 className="text-2xl font-semibold text-white">
-            Multigrain Bread
-          </h2>
+            <div>
+              <label htmlFor="email" className="block mb-2 font-semibold">
+                Email (Optional):
+              </label>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                className={`w-full p-2 bg-gray-900 text-white border rounded focus:outline-none focus:ring focus:ring-blue-500
+                  ${
+                    emailErrorText
+                      ? "border-red-500"
+                      : email && !emailErrorText
+                      ? "border-green-500"
+                      : "border-gray-700"
+                  }`}
+                onChange={handleEmail}
+              />
+              {emailErrorText && (
+                <p className="mt-2 text-sm text-red-500">{emailErrorText}</p>
+              )}
+            </div>
 
-          {/* heart button */}
-          <WishListButton />
-        </div>
+            <div>
+              <label htmlFor="password" className="block mb-2 font-semibold">
+                Password:
+              </label>
+              <input
+                type="password"
+                id="password"
+                value={password}
+                className={`w-full p-2 bg-gray-900 text-white border rounded focus:outline-none focus:ring focus:ring-blue-500
+                  ${
+                    passwordErrorText
+                      ? "border-red-500"
+                      : password && !passwordErrorText
+                      ? "border-green-500"
+                      : "border-gray-700"
+                  }`}
+                onChange={handlePasswordChange}
+              />
+              {passwordErrorText && (
+                <p className="mt-2 text-sm text-red-500">{passwordErrorText}</p>
+              )}
+            </div>
 
-        {/* description */}
-        <div className="flex flex-col justify-start p-2 mt-4 rounded-lg bg-card-beige">
-          <p className="mt-2 text-base text-black">
-            Hearty bread made with a variety of grains, giving it a rich, nutty
-            flavor and texture. Multigrain bread can vary in its composition.
-          </p>
-
-          {/* Read More button */}
-          <button className="mt-2 text-sm font-semibold text-left text-custom-red hover:text-blue-800 focus:outline-none">
-            Read More...
-          </button>
+            <button
+              type="submit"
+              className={`w-full py-2 rounded ${
+                isFormValid
+                  ? "bg-green-400 text-black cursor-pointer"
+                  : " bg-gray-600 text-gray-400 cursor-not-allowed"
+              }`}
+              disabled={!isFormValid}
+            >
+              Log In
+            </button>
+          </form>
         </div>
       </div>
     </div>
