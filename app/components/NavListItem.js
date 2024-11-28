@@ -3,9 +3,9 @@ import { HEADER_DETAILS } from "@/config/static-data";
 
 export default function NavListItem() {
   const listItems = HEADER_DETAILS.navMenu.map((item) => (
-    <ui key={uuidv4()}>
+    <ul key={uuidv4()}>
       <a href={item.navUrl}>{item.navText}</a>
-    </ui>
+    </ul>
   ));
   return (
     <div className="hidden sm:ml-6 sm:block">

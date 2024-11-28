@@ -2,36 +2,42 @@
 
 import { useState } from "react";
 
-export default function RegistrationForm() {
-  // Add state for username and usernameErrorText
+export default function ContactForm() {
+  // State for username and its error text
   const [userName, setUserName] = useState("");
   const [userNameErrorText, setUserNameErrorText] = useState("");
 
-  // Add state for email and emailErrorText
+  // State for email and its error text
   const [email, setEmail] = useState("");
   const [emailErrorText, setEmailErrorText] = useState("");
 
-  // Add state for isFormValid
+  // State for question and its error text
+  const [question, setQuestion] = useState("");
+  const [questionErrorText, setQuestionErrorText] = useState("");
+
+  // State for form validity
   const [isFormValid, setIsFormValid] = useState(false);
 
-  // Add state to set formData
-  const [formData, setFormData] = useState(null); // For storing and displaying results
+  // State for form data (for displaying results after submission)
+  const [formData, setFormData] = useState(null);
 
-  // Add function to validateForm
+  // Validate the entire form
   const validateForm = () => {
-    const userNameValidatity = userName.length >= 3;
-    const emailValidatity = email.length === 0 || /\S+@\S+\.\S+/.test(email);
+    const userNameValidity = userName.length >= 3;
+    const emailValidity = email.length === 0 || /\S+@\S+\.\S+/.test(email);
+    const questionValidity = question.length >= 3;
 
-    setIsFormValid(userNameValidatity && emailValidatity);
+    // Set form validity based on all fields
+    setIsFormValid(userNameValidity && emailValidity && questionValidity);
   };
 
-  // Add function to validate username
+  // Validate username
   const validateUserName = (value) => {
     if (value.length === 0) {
       setUserNameErrorText("Name is required");
     } else if (value.length > 0 && value.length < 3) {
       setUserNameErrorText(
-        "Name must be greater then or equal to 3 characters"
+        "Name must be greater than or equal to 3 characters"
       );
     } else {
       setUserNameErrorText("");
@@ -39,7 +45,7 @@ export default function RegistrationForm() {
     validateForm();
   };
 
-  // Add function to validate email
+  // Validate email
   const validateEmail = (value) => {
     if (value.length > 0 && !/\S+@\S+\.\S+/.test(value)) {
       setEmailErrorText("Email must be a valid email address");
@@ -49,28 +55,53 @@ export default function RegistrationForm() {
     validateForm();
   };
 
-  // Add function to handle username change
+  // Validate question
+  const validateQuestion = (value) => {
+    if (value.length === 0) {
+      setQuestionErrorText("Question/Comment is required");
+    } else if (value.length > 0 && value.length < 3) {
+      setQuestionErrorText(
+        "Question must be greater than or equal to 3 characters"
+      );
+    } else {
+      setQuestionErrorText("");
+    }
+    validateForm();
+  };
+
+  // Handle username change
   const handleUsernameChange = (e) => {
     const value = e.target.value;
     setUserName(value);
     validateUserName(value);
   };
 
-  // Add function to handle email value change
-  const handleEmail = (e) => {
+  // Handle email change
+  const handleEmailChange = (e) => {
     const value = e.target.value;
     setEmail(value);
     validateEmail(value);
   };
 
-  // Create a handleSubmitFunction
+  // Handle question change
+  const handleQuestionChange = (e) => {
+    const value = e.target.value;
+    setQuestion(value);
+    validateQuestion(value); // Validate the question as the user types
+  };
+
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormData({
       username: userName,
-      email: email || "N/A",
+      email: email || "N/A", // If email is not provided, display "N/A"
+      question,
     });
-    validateForm();
+    // Optionally, reset form after submission
+    // setUserName('');
+    // setEmail('');
+    // setQuestion('');
   };
 
   return (
@@ -121,34 +152,33 @@ export default function RegistrationForm() {
                       ? "border-green-500"
                       : "border-gray-700"
                   }`}
-                onChange={handleEmail}
+                onChange={handleEmailChange}
               />
               {emailErrorText && (
                 <p className="text-red-500 text-sm mt-2">{emailErrorText}</p>
               )}
             </div>
 
-            {/* Make sure to change this all to question */}
             <div>
-              <label htmlFor="username" className="block font-semibold mb-2">
+              <label htmlFor="question" className="block font-semibold mb-2">
                 Question/Comment:
               </label>
               <input
                 type="text"
-                id="username"
-                value={userName}
-                className={`w-full p-2 bg-white text-black border rounded focus:outline-none focus:ring focus:ring-blue-500 
+                id="question"
+                value={question}
+                className={`w-full p-4 bg-white text-black border rounded focus:outline-none focus:ring focus:ring-blue-500 
                   ${
-                    userNameErrorText
+                    questionErrorText
                       ? "border-red-500"
-                      : userName && !userNameErrorText
+                      : question && !questionErrorText
                       ? "border-green-500"
                       : "border-gray-700"
-                  }`}
-                onChange={handleUsernameChange}
+                  } text-left`}
+                onChange={handleQuestionChange}
               />
-              {userNameErrorText && (
-                <p className="text-red-500 text-sm mt-2">{userNameErrorText}</p>
+              {questionErrorText && (
+                <p className="text-red-500 text-sm mt-2">{questionErrorText}</p>
               )}
             </div>
 
@@ -157,36 +187,60 @@ export default function RegistrationForm() {
               className={`w-full py-2 rounded ${
                 isFormValid
                   ? "bg-green-400 text-black cursor-pointer"
-                  : " bg-gray-600 text-gray-400 cursor-not-allowed"
+                  : "bg-gray-600 text-gray-400 cursor-not-allowed"
               }`}
               disabled={!isFormValid}
             >
-              Register
+              Submit
             </button>
           </form>
         </div>
 
         {/* Results Section */}
-        <div className="bg-gray-800 p-6 rounded-lg shadow-lg max-w-md w-full">
-          <h2 className="text-xl font-bold text-blue-500 mb-4">
+        {/* <div className="flex flex-col items-center justify-start w-full p-4">
+          <div className="text-center mb-8">
+            <h1>Golden Wheat Contact Us</h1>
+            <p>
+              Welcome to the Golden Wheat Contact Us page! We are here to assist
+              you with any questions, comments, or feedback you may have.
+              Whether you are inquiring about our products, services, or just
+              want to share your thoughts, this is the place to reach out.
+              Simply fill out the form with your details and message, and our
+              team will get back to you as soon as possible. We value your input
+              and look forward to hearing from you!
+            </p>
+          </div> */}
+
+        {/* Contact Form Section */}
+        <div className="bg-yellow-900 p-6 rounded-lg shadow-lg max-w-md w-full">
+          <img
+            src="images/alvaro-serrano-hjwKMkehBco-unsplash.jpg"
+            alt="Contact photo"
+            className="w-full h-auto mb-4"
+          />
+          <h2 className="text-xl font-bold text-yellow-500 mb-4">
             Contact Results
           </h2>
           {formData ? (
             <div>
               <p className="mb-2">
-                <span className="font-semibold">Username:</span>
+                <span className="font-semibold">Username:</span>{" "}
                 {formData.username}
               </p>
+              <p className="mb-2">
+                <span className="font-semibold">Email:</span> {formData.email}
+              </p>
               <p>
-                <span className="font-semibold">Email:</span>
-                {formData.email || "N/A"}
+                <span className="font-semibold">Question/Comment:</span>{" "}
+                {formData.question}
               </p>
             </div>
           ) : (
-            <p className="text-gray-400">No registration details to show.</p>
+            <p className="text-gray-400">No question/comments to show.</p>
           )}
         </div>
       </div>
     </div>
+    // </div>
   );
 }
