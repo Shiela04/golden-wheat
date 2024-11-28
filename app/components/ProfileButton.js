@@ -45,15 +45,17 @@ export default function ProfileButton() {
           aria-labelledby="user-menu-button"
           tabIndex={-1}
         >
-          <a
-            href="#"
-            className="block px-4 py-2 text-sm text-gray-700 hover:text-black hover:font-bold hover:bg-custom-light-brown"
+          <Link
+            href={`/SignUp`}
+            className="block px-4 py-2 text-sm text-gray-700
+            hover:text-black hover:font-bold hover:bg-custom-light-brown"
             role="menuitem"
             tabIndex={-1}
             id="user-menu-item-0"
           >
             Sign Up
-          </a>
+          </Link>
+
           <Link
             href={`/login`}
             className="block px-4 py-2 text-sm text-gray-700
