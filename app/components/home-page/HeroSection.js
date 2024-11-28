@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 /* eslint-disable @next/next/no-img-element */
 export default function HeroSection() {
   return (
-    <div className="flex flex-col md:flex-row items-stretch md:h-[50vh] lg:h-[70vh]">
+    <div className="flex flex-col md:flex-row items-stretch h-screen">
       <div className="md:w-3/5 md:h-full w-full mb-0 lg:w-2/3 items-center justify-center h-full">
         <img
           className="w-full h-full object-cover"
@@ -20,9 +22,11 @@ export default function HeroSection() {
           nutrition and flavor. Discover the rich, nutty flavors of whole wheat
           bread – baked fresh, every day!
         </p>
-        <button className="lg:my-10 lg:text-xl text-white bg-custom-red rounded-3xl p-3 hover:font-bold">
-          View Our Products
-        </button>
+        <Link href={`/products`}>
+          <button className="lg:my-10 lg:text-xl text-white bg-custom-red rounded-3xl p-3 hover:font-bold">
+            View Our Products
+          </button>
+        </Link>
       </div>
     </div>
   );

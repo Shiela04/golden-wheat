@@ -102,6 +102,9 @@ export default function CardCarousel() {
 
   return (
     <div className="justify-center relative p-4 w-full overflow-hidden bg-black">
+      <h1 className="text-center text-2xl p-4 lg:text-3xl">
+        Browse Our Popular Breads
+      </h1>
       {isClient && (
         <div className="px-8 justify-center">
           <div

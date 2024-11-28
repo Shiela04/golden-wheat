@@ -5,7 +5,6 @@ import ShoppingListButton from "./ShoppingListButton";
 import WishListButton from "./WishListButton";
 import ProfileButton from "./ProfileButton";
 import Logo from "./Logo";
-import NavListItem from "./NavListItem";
 import Link from "next/link";
 
 export default function NavigationBar() {
@@ -53,36 +52,36 @@ export default function NavigationBar() {
           </div>
           <div className="flex flex-1 items-center justify-center sm:justify-start">
             <Logo />
-            <NavListItem />
-            {/* <div className="hidden sm:ml-6 sm:block">
+            {/* <NavListItem /> */}
+            <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4 items-center">
-                <a
-                  href="#"
+                <Link
+                  href={`/`}
                   className="rounded-md px-3 py-2 text-sm font-bold text-white hover:bg-custom-lime hover:text-black"
                   aria-current="page"
                 >
                   Home
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href={`/about`}
                   className="rounded-md px-3 py-2 text-sm font-bold text-white hover:bg-custom-lime hover:text-black"
                 >
                   About
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href={`/products`}
                   className="rounded-md px-3 py-2 text-sm font-bold text-white hover:bg-custom-lime hover:text-black"
                 >
                   Products
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href={`contact`}
                   className="rounded-md px-3 py-2 text-sm font-bold text-white hover:bg-custom-lime hover:text-black"
                 >
                   Contact
-                </a>
+                </Link>
               </div>
-            </div> */}
+            </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <Link href={`/shopping-list`}>
@@ -100,31 +99,31 @@ export default function NavigationBar() {
       <div className="sm:hidden" id="mobile-menu">
         {isMobileMenuVisible && (
           <div className="space-y-1 px-2 pb-3 pt-2">
-            <a
-              href="#"
+            <Link
+              href={`/`}
               className="block rounded-md px-3 py-2 text-base font-bold text-white hover:text-black hover:bg-custom-lime"
               aria-current="page"
             >
               Home
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href={`about`}
               className="block rounded-md px-3 py-2 text-base font-bold text-white hover:text-black hover:bg-custom-lime"
             >
               About
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href={`products`}
               className="block rounded-md px-3 py-2 text-base font-bold text-white hover:text-black hover:bg-custom-lime"
             >
               Products
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href={`contact`}
               className="block rounded-md px-3 py-2 text-base font-bold text-white hover:text-black hover:bg-custom-lime"
             >
               Contact
-            </a>
+            </Link>
           </div>
         )}
       </div>

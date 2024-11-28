@@ -21,13 +21,13 @@ export default function Card() {
   return (
     <div className="p-4">
       {/* // Header section */}
-      <h1 className="text-5xl font-bold text-center mb-6">
+      <h1 className="text-2xl lg:text-4xl font-bold text-center mb-6">
         Delicious Bakery Products
       </h1>
 
       {/* // Short description for Product section */}
-      <div className="px-96">
-        <p className="text-md text-center mb-6 font-semibold">
+      <div className="p-10 flex justify-center">
+        <p className="text-md text-center lg:max-w-4xl mb-6 font-semibold">
           Welcome to Our Bakery! Discover the joy of freshly baked bread,
           pastries, and buns, made with love and the finest ingredients. From
           everyday essentials to special treats, every bite is crafted to
