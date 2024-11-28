@@ -1,4 +1,3 @@
-import NavigationBar from "./components/NavigationBar";
 import BreadCardCarousel from "./components/BreadCardCarousel";
 import HeroSection from "./components/HeroSection";
 
@@ -7,6 +6,7 @@ export default function Home() {
     <div className="bg-page-bg">
       <HeroSection />
       <BreadCardCarousel />
+      <h1></h1>
     </div>
   );
 }
