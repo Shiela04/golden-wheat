@@ -36,11 +36,11 @@ export default function Card() {
       </div>
 
       <div>
-        <h2 className="text-4xl font-bold text-center py-16">Breads</h2>
+        <h2 className="text-4xl font-bold text-center py-14">Breads</h2>
       </div>
 
       {/* // Bread 3x3 Grid Section  */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 p-4">
         {/* // Bread */}
         <BreadProductCard />
         <CiabattaProductCard />
@@ -54,7 +54,7 @@ export default function Card() {
         <h2 className="text-4xl font-bold text-center py-16">Pastries</h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 p-4">
         {/* // pastries 3x3 Grid Section */}
         <CroissantProductCard />
         <PainAuChocolatProductCard />
@@ -66,7 +66,7 @@ export default function Card() {
         <h2 className="text-4xl font-bold text-center py-16">Buns</h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 p-4">
         {/* // Buns 3x3 Grid Section */}
         <DinnerRollProductCard />
         <HamburgerBunProductCard />

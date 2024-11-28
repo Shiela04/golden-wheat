@@ -21,6 +21,9 @@ export default function ContactForm() {
   // State for form data (for displaying results after submission)
   const [formData, setFormData] = useState(null);
 
+  // State for Showing the Popup
+  const [showPopup, setShowPopUp] = useState(false);
+
   // Validate the entire form
   const validateForm = () => {
     const userNameValidity = userName.length >= 3;
@@ -98,10 +101,13 @@ export default function ContactForm() {
       email: email || "N/A", // If email is not provided, display "N/A"
       question,
     });
+    setShowPopUp(true); // Shows the popup after the from is submitted and if successful
     // Optionally, reset form after submission
     // setUserName('');
     // setEmail('');
     // setQuestion('');
+
+    setTimeout(() => setShowPopUp(false), 7000); // Popup will disapear after a couple of seconds if user does not close it
   };
 
   return (
@@ -112,6 +118,15 @@ export default function ContactForm() {
           <h1 className="text-2xl font-bold text-yellow-500 mb-6 text-center">
             Contact Form
           </h1>
+          <p className="mb-6 text-yellow-500 font-bold">
+            Welcome to the Golden Wheat Contact Us page! We are here to assist
+            you with any questions, comments, or feedback you may have. Whether
+            you are inquiring about our products, services, or just want to
+            share your thoughts, this is the place to reach out. Simply fill out
+            the form with your details and message, and our team will get back
+            to you as soon as possible. We value your input and look forward to
+            hearing from you!
+          </p>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label htmlFor="username" className="block font-semibold mb-2">
@@ -195,6 +210,24 @@ export default function ContactForm() {
             </button>
           </form>
         </div>
+
+        {showPopup && (
+          <div className="fixed insert-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
+            <div className="bg-white p-6 rounded-lg shadow-lg text-center w-72">
+              <h2 className="text-xl font-bold text-green-600">Success!</h2>
+              <p className="text-black">
+                Your Question/Feedback has been successfully sent. We will get
+                back to you as soon as possible.
+              </p>
+              <button
+                className="mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-700"
+                onClick={() => setShowPopUp(false)}
+              >
+                close
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Results Section */}
         {/* <div className="flex flex-col items-center justify-start w-full p-4">
