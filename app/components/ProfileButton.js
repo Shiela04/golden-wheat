@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function ProfileButton() {
@@ -53,15 +54,17 @@ export default function ProfileButton() {
           >
             Sign Up
           </a>
-          <a
-            href="#"
-            className="block px-4 py-2 text-sm text-gray-700 hover:text-black hover:font-bold hover:bg-custom-light-brown"
+          <Link
+            href={`/login`}
+            className="block px-4 py-2 text-sm text-gray-700
+            hover:text-black hover:font-bold hover:bg-custom-light-brown"
             role="menuitem"
             tabIndex={-1}
             id="user-menu-item-1"
           >
             Sign In
-          </a>
+          </Link>
+
           <a
             href="#"
             className="block px-4 py-2 text-sm text-gray-700 hover:text-black hover:font-bold hover:bg-custom-light-brown"
