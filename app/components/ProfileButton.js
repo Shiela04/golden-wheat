@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function ProfileButton() {
@@ -44,15 +45,15 @@ export default function ProfileButton() {
           aria-labelledby="user-menu-button"
           tabIndex={-1}
         >
-          <a
-            href="#"
+          <Link
+            href={`/sign-up`}
             className="block px-4 py-2 text-sm text-gray-700 hover:text-black hover:font-bold hover:bg-custom-light-brown"
             role="menuitem"
             tabIndex={-1}
             id="user-menu-item-0"
           >
             Sign Up
-          </a>
+          </Link>
           <a
             href="#"
             className="block px-4 py-2 text-sm text-gray-700 hover:text-black hover:font-bold hover:bg-custom-light-brown"
