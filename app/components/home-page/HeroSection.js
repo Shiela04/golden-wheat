@@ -5,7 +5,7 @@ export default function HeroSection() {
       <div className="md:w-3/5 md:h-full w-full mb-0 lg:w-2/3 items-center justify-center h-full">
         <img
           className="w-full h-full object-cover"
-          src="images/whole-wheat-bread.jpg"
+          src="../images/whole-wheat-bread.jpg"
           alt="whole wheat"
         />
       </div>

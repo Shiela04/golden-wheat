@@ -1,6 +1,5 @@
-import BreadCardCarousel from "./components/BreadCardCarousel";
-import HeroSection from "./components/HeroSection";
-import CardCarousel from "./components/CardCarousel";
+import HeroSection from "./components/home-page/HeroSection";
+import CardCarousel from "./components/home-page/CardCarousel";
 
 export default function Home() {
   return (
