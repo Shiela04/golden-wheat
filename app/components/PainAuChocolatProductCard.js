@@ -2,17 +2,17 @@ import WishListButton from "./WishListButton";
 
 export default function PainAuChocolatProductCard() {
   return (
-    <div className="max-w-sm mx-auto bg-card-background border border-black rounded-lg shadow-lg overflow-hidden">
+    <div className="max-w-sm mx-auto overflow-hidden border border-black rounded-lg shadow-lg bg-card-background">
       {/* {card image} */}
       <img
-        className="w-full h-48 object-cover"
-        src="images/pain-au-chocolat.jpg"
+        className="object-cover w-full h-48"
+        src="/images/pain-au-chocolat.jpg"
         alt="logo"
       />
 
       {/* contents */}
       <div className="p-4 my-1">
-        <div className="flex flex-row justify-between items-center">
+        <div className="flex flex-row items-center justify-between">
           {/* title */}
           <h2 className="text-2xl font-semibold text-white">
             Pain Au Chocolat
@@ -23,8 +23,8 @@ export default function PainAuChocolatProductCard() {
         </div>
 
         {/* description */}
-        <div className="flex flex-col justify-start p-2 bg-card-beige rounded-lg mt-4">
-          <p className="mt-2 text-black text-base">
+        <div className="flex flex-col justify-start p-2 mt-4 rounded-lg bg-card-beige">
+          <p className="mt-2 text-base text-black">
             A flaky, buttery pastry with a rich, chocolate-filled center. Made
             from laminated dough, pain au chocolat is baked to a golden, crisp
             perfection. Its light, airy texture and indulgent chocolate filling
@@ -33,10 +33,10 @@ export default function PainAuChocolatProductCard() {
           </p>
 
           {/* Read More button */}
-          <button className="mt-2 text-sm text-left text-custom-red font-semibold hover:text-blue-800 focus:outline-none">
+          <button className="mt-2 text-sm font-semibold text-left text-custom-red hover:text-blue-800 focus:outline-none">
             View Details...
           </button>
-          <p className="text-black font-bold text-xl">$3.00</p>
+          <p className="text-xl font-bold text-black">$3.00</p>
         </div>
       </div>
     </div>

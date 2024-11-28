@@ -11,8 +11,8 @@ export default function HeroSection() {
           alt="whole wheat"
         />
       </div>
-      <div className="h-full w-full text-center text-black bg-card-beige flex flex-col justify-between items-center p-8 gap-4 md:w-2/5 lg:w-1/3">
-        <h1 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl xlg:text-5xl font-extrabold py-2">
+      <div className="flex flex-col items-center justify-between w-full h-full gap-4 p-8 text-center text-black bg-card-beige md:w-2/5 lg:w-1/3">
+        <h1 className="py-2 text-2xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl xlg:text-5xl">
           Delicious Recipes
         </h1>
         <p className="text-lg sm:text-xl md:text-base max-w-3xl mx-auto lg:text-xl">
