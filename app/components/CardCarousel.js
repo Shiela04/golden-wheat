@@ -9,14 +9,14 @@ export default function CardCarousel() {
       id: 1,
       title: "Sourdough",
       description:
-        "Tangy, chewy bread with a crisp crust, made through natural fermentation using wild yeast and lactic acid bacteria, offering a unique and flavorful taste.",
+        "Tangy, chewy bread with a crisp crust, made using natural fermentation with wild yeast and lactic acid bacteria, creating a distinct, complex, and flavorful taste.",
       imageSrc: "images/sourdough-bread.jpg",
     },
     {
       id: 2,
       title: "Whole Wheat",
       description:
-        "Hearty bread with a nutty flavor, made from whole wheat flour, preserving the bran, germ, and endosperm for natural nutrients and fiber.",
+        "Hearty bread with a nutty flavor, made from whole wheat flour, retaining the bran, germ, and endosperm for added nutrients, fiber, and a rich, wholesome texture.",
       imageSrc: "images/whole-wheat-bread.jpg",
     },
     {
@@ -101,7 +101,7 @@ export default function CardCarousel() {
   const transform = -(currentIndex * 100) / totalCards;
 
   return (
-    <div className="justify-center relative p-4 w-full max-w-full overflow-hidden bg-black">
+    <div className="justify-center relative p-4 w-full overflow-hidden bg-black">
       {isClient && (
         <div className="px-8 justify-center">
           <div
