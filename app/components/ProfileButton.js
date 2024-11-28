@@ -26,8 +26,8 @@ export default function ProfileButton() {
           <span className="absolute -inset-1.5" />
           <span className="sr-only">Open user menu</span>
           <img
-            className="size-12 rounded-full"
-            src="images/login.png"
+            className="rounded-full size-12"
+            src="/images/login.png"
             alt="profile avatar"
           />
         </button>
@@ -38,7 +38,7 @@ export default function ProfileButton() {
       {isProfileMenuVisible && (
         <div
           id="profile-menu"
-          className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none"
+          className="absolute right-0 z-10 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black/5 focus:outline-none"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="user-menu-button"

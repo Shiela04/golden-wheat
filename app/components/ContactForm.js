@@ -111,14 +111,14 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-orange-200 text-white min-h-screen flex justify-center items-center p-4">
-      <div className="flex flex-wrap lg:flex-nowrap gap-8 w-full justify-center">
+    <div className="flex items-center justify-center min-h-screen p-4 text-white bg-orange-200">
+      <div className="flex flex-wrap justify-center w-full gap-8 lg:flex-nowrap">
         {/* Form Section */}
-        <div className="bg-yellow-900 p-6 rounded-lg shadow-lg max-w-md w-full">
-          <h1 className="text-2xl font-bold text-yellow-500 mb-6 text-center">
+        <div className="w-full max-w-md p-6 bg-yellow-900 rounded-lg shadow-lg">
+          <h1 className="mb-6 text-2xl font-bold text-center text-yellow-500">
             Contact Form
           </h1>
-          <p className="mb-6 text-yellow-500 font-bold">
+          <p className="mb-6 font-bold text-yellow-500">
             Welcome to the Golden Wheat Contact Us page! We are here to assist
             you with any questions, comments, or feedback you may have. Whether
             you are inquiring about our products, services, or just want to
@@ -129,7 +129,7 @@ export default function ContactForm() {
           </p>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label htmlFor="username" className="block font-semibold mb-2">
+              <label htmlFor="username" className="block mb-2 font-semibold">
                 Username:
               </label>
               <input
@@ -147,12 +147,12 @@ export default function ContactForm() {
                 onChange={handleUsernameChange}
               />
               {userNameErrorText && (
-                <p className="text-red-500 text-sm mt-2">{userNameErrorText}</p>
+                <p className="mt-2 text-sm text-red-500">{userNameErrorText}</p>
               )}
             </div>
 
             <div>
-              <label htmlFor="email" className="block font-semibold mb-2">
+              <label htmlFor="email" className="block mb-2 font-semibold">
                 Email (Optional):
               </label>
               <input
@@ -170,12 +170,12 @@ export default function ContactForm() {
                 onChange={handleEmailChange}
               />
               {emailErrorText && (
-                <p className="text-red-500 text-sm mt-2">{emailErrorText}</p>
+                <p className="mt-2 text-sm text-red-500">{emailErrorText}</p>
               )}
             </div>
 
             <div>
-              <label htmlFor="question" className="block font-semibold mb-2">
+              <label htmlFor="question" className="block mb-2 font-semibold">
                 Question/Comment:
               </label>
               <input
@@ -193,7 +193,7 @@ export default function ContactForm() {
                 onChange={handleQuestionChange}
               />
               {questionErrorText && (
-                <p className="text-red-500 text-sm mt-2">{questionErrorText}</p>
+                <p className="mt-2 text-sm text-red-500">{questionErrorText}</p>
               )}
             </div>
 
@@ -212,15 +212,15 @@ export default function ContactForm() {
         </div>
 
         {showPopup && (
-          <div className="fixed insert-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center w-72">
+          <div className="fixed z-50 flex items-center justify-center bg-black bg-opacity-50 insert-0">
+            <div className="p-6 text-center bg-white rounded-lg shadow-lg w-72">
               <h2 className="text-xl font-bold text-green-600">Success!</h2>
               <p className="text-black">
                 Your Question/Feedback has been successfully sent. We will get
                 back to you as soon as possible.
               </p>
               <button
-                className="mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-700"
+                className="px-4 py-2 mt-4 text-white bg-green-500 rounded hover:bg-green-700"
                 onClick={() => setShowPopUp(false)}
               >
                 close
@@ -231,7 +231,7 @@ export default function ContactForm() {
 
         {/* Results Section */}
         {/* <div className="flex flex-col items-center justify-start w-full p-4">
-          <div className="text-center mb-8">
+          <div className="mb-8 text-center">
             <h1>Golden Wheat Contact Us</h1>
             <p>
               Welcome to the Golden Wheat Contact Us page! We are here to assist
@@ -245,13 +245,13 @@ export default function ContactForm() {
           </div> */}
 
         {/* Contact Form Section */}
-        <div className="bg-yellow-900 p-6 rounded-lg shadow-lg max-w-md w-full">
+        <div className="w-full max-w-md p-6 bg-yellow-900 rounded-lg shadow-lg">
           <img
-            src="images/alvaro-serrano-hjwKMkehBco-unsplash.jpg"
+            src="/images/alvaro-serrano-hjwKMkehBco-unsplash.jpg"
             alt="Contact photo"
             className="w-full h-auto mb-4"
           />
-          <h2 className="text-xl font-bold text-yellow-500 mb-4">
+          <h2 className="mb-4 text-xl font-bold text-yellow-500">
             Contact Results
           </h2>
           {formData ? (
