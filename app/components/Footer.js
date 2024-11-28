@@ -8,25 +8,34 @@ export default function Footer() {
           <h2 className="mb-4 text-lg font-bold">Connect With Us</h2>
           <ul className="space-y-4">
             <li className="flex items-center space-x-2">
-              <i className="text-xl fab fa-x-twitter"></i>
+              <a href="https://x.com/">
+                {" "}
+                <i className="text-xl text-black transition-colors fab fa-x-twitter hover:text-gray-200"></i>
+              </a>
               <a href="#" className="hover:underline">
                 Contact
               </a>
             </li>
             <li className="flex items-center space-x-2">
-              <i className="text-xl fab fa-facebook"></i>
+              <a href="https://facebook.com/">
+                <i className="text-xl text-blue-600 transition-colors fab fa-facebook hover:text-blue-200"></i>
+              </a>
               <a href="#" className="hover:underline">
                 About
               </a>
             </li>
             <li className="flex items-center space-x-2">
-              <i className="text-xl fab fa-instagram"></i>
+              <a href="https://instagram.com/">
+                <i className="text-xl text-pink-600 transition-colors fab fa-instagram hover:text-pink-200"></i>
+              </a>
               <a href="#" className="hover:underline">
                 Instagram
               </a>
             </li>
             <li className="flex items-center space-x-2">
-              <i className="text-xl fab fa-youtube"></i>
+              <a href="https://youtube.com/">
+                <i className="text-xl text-red-600 transition-colors fab fa-youtube hover:text-red-200"></i>
+              </a>
               <a href="#" className="hover:underline">
                 YouTube
               </a>

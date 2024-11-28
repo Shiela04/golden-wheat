@@ -9,7 +9,7 @@ export default function NavListItem() {
   ));
   return (
     <div className="hidden sm:ml-6 sm:block">
-      <div className="flex space-x-4 items-center list-none">{listItems}</div>
+      <div className="flex items-center space-x-4 list-none">{listItems}</div>
     </div>
   );
 }
