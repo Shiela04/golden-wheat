@@ -14,7 +14,7 @@ export default function BreadProductCard() {
       <div className="p-4 my-1">
         <div className="flex flex-row justify-between items-center">
           {/* title */}
-          <h2 className="text-2xl font-semibold text-white">Bread</h2>
+          <h2 className="text-2xl font-semibold text-white">Baguette</h2>
 
           {/* heart button */}
           <WishListButton />
@@ -32,7 +32,7 @@ export default function BreadProductCard() {
           <button className="mt-2 text-sm text-left text-custom-red font-semibold hover:text-blue-800 focus:outline-none">
             View Details...
           </button>
-          <p className="text-black font-bold text-xl">$420.69</p>
+          <p className="text-black font-bold text-xl">$3.00</p>
         </div>
       </div>
     </div>

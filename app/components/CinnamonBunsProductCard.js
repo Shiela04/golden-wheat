@@ -14,7 +14,7 @@ export default function CinnamonBunsProductCard() {
       <div className="p-4 my-1">
         <div className="flex flex-row justify-between items-center">
           {/* title */}
-          <h2 className="text-2xl font-semibold text-white">Cinnamon Buns</h2>
+          <h2 className="text-2xl font-semibold text-white">Cinnamon rolls</h2>
 
           {/* heart button */}
           <WishListButton />
@@ -33,7 +33,7 @@ export default function CinnamonBunsProductCard() {
           <button className="mt-2 text-sm text-left text-custom-red font-semibold hover:text-blue-800 focus:outline-none">
             View Details...
           </button>
-          <p className="text-yellow-500 font-bold text-xl">$420.69</p>
+          <p className="text-black font-bold text-xl">$2.00</p>
         </div>
       </div>
     </div>
