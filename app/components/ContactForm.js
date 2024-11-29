@@ -50,7 +50,9 @@ export default function ContactForm() {
 
   // Validate email
   const validateEmail = (value) => {
-    if (value.length > 0 && !/\S+@\S+\.\S+/.test(value)) {
+    if (value.length === 0) {
+      setEmailErrorText("Email is required");
+    } else if (value.length > 0 && !/\S+@\S+\.\S+/.test(value)) {
       setEmailErrorText("Email must be a valid email address");
     } else {
       setEmailErrorText("");
@@ -153,7 +155,7 @@ export default function ContactForm() {
 
             <div>
               <label htmlFor="email" className="block mb-2 font-semibold">
-                Email (Optional):
+                Email:
               </label>
               <input
                 type="email"
