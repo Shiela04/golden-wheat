@@ -16,6 +16,7 @@ import RyeBreadProductCard from "../components/RyeBreadProductCard";
 import SourdoughBreadProductCard from "../components/SourdoughBreadProductCard";
 import StickyBunProductCard from "../components/StickyBunProductCard";
 import WholeWheatProductCard from "../components/WholeWheatProductCard";
+import Link from "next/link";
 
 export default function Card() {
   return (
@@ -42,7 +43,10 @@ export default function Card() {
       {/* // Bread 3x3 Grid Section  */}
       <div className="grid grid-cols-1 gap-10 p-4 sm:grid-cols-2 md:grid-cols-3">
         {/* // Bread */}
-        <SourdoughBreadProductCard />
+
+        <Link href="http://localhost:4000/products/6748bba0900b19e0a958c113">
+          <SourdoughBreadProductCard />
+        </Link>
         <WholeWheatProductCard />
         <BreadProductCard />
         <CiabattaProductCard />

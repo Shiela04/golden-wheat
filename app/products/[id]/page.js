@@ -46,11 +46,11 @@ export default function IndividualProductPage({ params }) {
 
   return (
     <div className="text-center">
-      {/* <img
-    src={`http://localhost:4000/images/${id}`} // Replace with your image field
-    alt={bread.name}
-    className="w-64 h-64 mx-auto"
-  /> */}
+      <img
+        src={product.imageUrl}
+        alt={product.name}
+        // className="w-64 h-64 mx-auto mb-4 rounded-md"
+      />
       <h1 className="text-2xl text-center">{product.name}</h1>
       <p className="text-lg text-center">{product.description}</p>
       <p className="text-lg font-bold text-center">Price: ${product.price}</p>
