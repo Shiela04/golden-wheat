@@ -13,7 +13,7 @@ export default function Footer() {
                 <i className="text-xl text-black transition-colors fab fa-x-twitter hover:text-gray-200"></i>
               </a>
               <a href="#" className="hover:underline">
-                Contact
+                Twitter
               </a>
             </li>
             <li className="flex items-center space-x-2">
@@ -21,7 +21,7 @@ export default function Footer() {
                 <i className="text-xl text-blue-600 transition-colors fab fa-facebook hover:text-blue-200"></i>
               </a>
               <a href="#" className="hover:underline">
-                About
+                Facebook
               </a>
             </li>
             <li className="flex items-center space-x-2">

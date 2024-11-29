@@ -4,7 +4,7 @@
 import { useState } from "react";
 
 export default function RegistrationForm() {
-  //   const router = useRouter();
+  const router = useRouter();
   // Add state for username and usernameErrorText
   const [userName, setUserName] = useState("");
   const [userNameErrorText, setUserNameErrorText] = useState("");
@@ -255,7 +255,7 @@ export default function RegistrationForm() {
             </div>
 
             <button
-              //   onClick={() => router.push(`/login`)}
+              onClick={() => router.push(`/login`)}
               type="submit"
               className={`w-full py-2 rounded ${
                 isFormValid
