@@ -47,7 +47,7 @@ export default function Card() {
       <div className="grid grid-cols-1 gap-10 p-4 sm:grid-cols-2 md:grid-cols-3">
         {/* // Bread */}
 
-        <Link href="http://localhost:4000/products/${productId}">
+        <Link href="http://localhost:4000/products/${product_Id}">
           <Cards />
         </Link>
         {/* <WholeWheatProductCard />
