@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Cookies from "js-cookie";
+import Router from "next/router";
 
 export default function RegistrationForm() {
   // Add state for username and usernameErrorText
@@ -94,8 +96,8 @@ export default function RegistrationForm() {
       const response = await fetch("http://localhost:4000/user/login", {
         method: "POST",
         body: JSON.stringify({
-          email: "ethan456@goldenbakery.ca",
-          password: "password12345",
+          email: email,
+          password: password,
         }),
         headers: {
           "Content-Type": "application/json",
@@ -107,6 +109,16 @@ export default function RegistrationForm() {
       console.log("data", responsedata);
     } catch (error) {
       console.error("Erorr fethcing data");
+
+      if (responsedata.message === "User created succesfully") {
+        Cookies.set("userToken", responsedata.token, { expires: 7 });
+        Cookies.set("name", userName, { expires: 7 });
+        localStorage.setItem("isLoggedIn", true);
+        setFormDataToShow(data.message);
+        Router.push("/");
+      } else {
+        console.error("Error:", responsedata.message);
+      }
     }
   };
 
