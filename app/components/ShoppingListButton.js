@@ -2,15 +2,11 @@ export default function ShoppingList() {
   return (
     <button
       type="button"
-      className="relative text-gray-400 rounded-full hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:scale-110"
+      className="relative h-10 w-10 text-2xl hover:scale-110 focus:bg-black focus:rounded-full"
     >
       <span className="absolute -inset-1.5" />
       <span className="sr-only">View Pre-Ordered List</span>
-      <img
-        className="rounded-full size-8"
-        src="/images/shopping-bag.png"
-        alt="log in"
-      />
+      <i className="fas fa-shopping-bag text-2xl text-white" />
     </button>
   );
 }

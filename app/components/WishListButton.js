@@ -1,17 +1,14 @@
-/* eslint-disable @next/next/no-img-element */
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 export default function WishListButton() {
   return (
     <button
       type="button"
-      className="relative text-gray-400 rounded-full hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:scale-110"
+      className="relative h-10 w-10 text-2xl hover:scale-110 focus:bg-black focus:rounded-full"
     >
       <span className="absolute -inset-1.5" />
       <span className="sr-only">View Wishlist</span>
-      <img
-        className="rounded-full size-8"
-        src="/images/wishlist.png"
-        alt="white heart"
-      />
+      <i className="fas fa-heart text-2xl " tabIndex={0} />
     </button>
   );
 }

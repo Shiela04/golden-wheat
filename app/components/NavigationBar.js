@@ -57,33 +57,33 @@ export default function NavigationBar() {
               <div className="flex space-x-4 items-center">
                 <Link
                   href={`/`}
-                  className="rounded-md px-3 py-2 text-sm font-bold text-white hover:bg-custom-lime hover:text-black"
+                  className="rounded-md px-3 py-2 text-base lg:text-lg font-bold text-white hover:bg-custom-lime hover:text-black"
                   aria-current="page"
                 >
                   Home
                 </Link>
                 <Link
                   href={`/about`}
-                  className="rounded-md px-3 py-2 text-sm font-bold text-white hover:bg-custom-lime hover:text-black"
+                  className="rounded-md px-3 py-2 text-base lg:text-lg font-bold text-white hover:bg-custom-lime hover:text-black"
                 >
                   About
                 </Link>
                 <Link
                   href={`/products`}
-                  className="rounded-md px-3 py-2 text-sm font-bold text-white hover:bg-custom-lime hover:text-black"
+                  className="rounded-md px-3 py-2 text-base lg:text-lg font-bold text-white hover:bg-custom-lime hover:text-black"
                 >
                   Products
                 </Link>
                 <Link
                   href={`contact`}
-                  className="rounded-md px-3 py-2 text-sm font-bold text-white hover:bg-custom-lime hover:text-black"
+                  className="rounded-md px-3 py-2 text-base lg:text-lg font-bold text-white hover:bg-custom-lime hover:text-black"
                 >
                   Contact
                 </Link>
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 gap-2">
             <Link href={`/shopping-list`}>
               <ShoppingListButton />
             </Link>
