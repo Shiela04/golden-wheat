@@ -1,22 +1,5 @@
 "use client";
-// import AlmondCroissantProductCard from "../components/AlmondCroissantProductCard";
-// import BreadProductCard from "../components/BreadProductCard";
-// import BriocheBunProductCard from "../components/BriocheBunProductCard";
-// import ChelseaBunProductCard from "../components/ChelseaBunProductCard";
-// import CiabattaProductCard from "../components/CiabattaProductCard";
-// import CinnamonBunsProductCard from "../components/CinnamonBunsProductCard";
-// import CroissantProductCard from "../components/CroissantsProductCard";
-// import DanishPastryProductCard from "../components/DanishPastryProductCard";
-// import DinnerRollProductCard from "../components/DinnerRollsProductCard";
-// import HamburgerBunProductCard from "../components/HamburgerBunProductCard";
-// import HotCrossBunProductCard from "../components/HotCrossBunProductCard";
-// import HotDogBunsProductCard from "../components/HotDogBunProductCard";
-// import MultigrainProductCard from "../components/MultigrainProductCard";
-// import PainAuChocolatProductCard from "../components/PainAuChocolatProductCard";
-// import RyeBreadProductCard from "../components/RyeBreadProductCard";
-// import SourdoughBreadProductCard from "../components/SourdoughBreadProductCard";
-// import StickyBunProductCard from "../components/StickyBunProductCard";
-// import WholeWheatProductCard from "../components/WholeWheatProductCard";
+
 import Cards from "../components/Cards";
 
 import Link from "next/link";
@@ -50,11 +33,6 @@ export default function Card() {
         <Link href="http://localhost:4000/products/${productId}">
           <Cards />
         </Link>
-        {/* <WholeWheatProductCard />
-        <BreadProductCard />
-        <CiabattaProductCard />
-        <RyeBreadProductCard />
-        <MultigrainProductCard /> */}
       </div>
 
       <div>
@@ -63,10 +41,9 @@ export default function Card() {
 
       <div className="grid grid-cols-1 gap-10 p-4 sm:grid-cols-2 md:grid-cols-3">
         {/* // pastries 3x3 Grid Section */}
-        {/* <CroissantProductCard />
-        <PainAuChocolatProductCard />
-        <AlmondCroissantProductCard />
-        <DanishPastryProductCard /> */}
+        <Link href="http://localhost:4000/products/${productId}">
+          <Cards />
+        </Link>
       </div>
 
       <div>
@@ -75,14 +52,9 @@ export default function Card() {
 
       <div className="grid grid-cols-1 gap-10 p-4 sm:grid-cols-2 md:grid-cols-3">
         {/* // Buns 3x3 Grid Section */}
-        {/* <DinnerRollProductCard />
-        <HamburgerBunProductCard />
-        <HotDogBunsProductCard />
-        <BriocheBunProductCard />
-        <CinnamonBunsProductCard />
-        <StickyBunProductCard />
-        <ChelseaBunProductCard />
-        <HotCrossBunProductCard /> */}
+        <Link href="http://localhost:4000/products/${productId}">
+          <Cards />
+        </Link>
       </div>
     </div>
   );
