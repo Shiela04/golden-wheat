@@ -49,7 +49,7 @@ export default function CardCarousel() {
     },
   ];
 
-  // state to track current slide
+  // state management
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isClient, setIsClient] = useState(false);
   const [cardsPerView, setCardsPerView] = useState(3);
