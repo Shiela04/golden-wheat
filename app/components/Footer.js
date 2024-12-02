@@ -117,7 +117,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-[#a67358] text-center py-4">
+      <div className="py-4 text-center bg-custom-nav-brown">
         <p className="text-sm text-white">Wheat Bakery © 2024</p>
       </div>
     </footer>
