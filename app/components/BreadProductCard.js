@@ -1,6 +1,6 @@
 import WishListButton from "./WishListButton";
 
-export default function BreadProductCard() {
+export default function BreadProductCard({ product, onAddToWishlist }) {
   return (
     <div className="max-w-sm mx-auto overflow-hidden border border-black rounded-lg shadow-lg bg-card-background">
       {/* {card image} */}
@@ -17,7 +17,8 @@ export default function BreadProductCard() {
           <h2 className="text-2xl font-semibold text-white">Baguette</h2>
 
           {/* heart button */}
-          <WishListButton />
+
+          <WishListButton onClick={() => onAddToWishlist} />
         </div>
 
         {/* description */}

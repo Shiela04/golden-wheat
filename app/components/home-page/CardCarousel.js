@@ -10,50 +10,70 @@ export default function CardCarousel() {
       title: "Sourdough",
       description:
         "Tangy, chewy bread with a crisp crust, made through natural fermentation using wild yeast and lactic acid bacteria, offering a unique and flavorful taste.",
-      imageSrc: "images/sourdough-bread.jpg",
+      imageUrl: "images/sourdough-bread.jpg",
     },
     {
       id: 2,
       title: "Whole Wheat",
       description:
         "Hearty bread with a nutty flavor, made from whole wheat flour, preserving the bran, germ, and endosperm for natural nutrients and fiber.",
-      imageSrc: "images/whole-wheat-bread.jpg",
+      imageUrl: "images/whole-wheat-bread.jpg",
     },
     {
       id: 3,
       title: "Baguette",
       description:
         "Classic French bread with a crisp crust. Made with simple ingredients—flour, water, yeast, and salt—the dough undergoes a lengthy fermentation process.",
-      imageSrc: "images/baguette.jpg",
+      imageUrl: "images/baguette.jpg",
     },
     {
       id: 4,
       title: "Ciabatta",
       description:
         "Italian bread with a light, airy texture. The name ciabatta means slipper in Italian, referring to its shape resembling a worn-out slipper.",
-      imageSrc: "images/ciabatta.jpg",
+      imageUrl: "images/ciabatta.jpg",
     },
     {
       id: 5,
       title: "Rye Bread",
       description:
         "Dense, flavorful bread with a dark crust, made with rye flour, often combined with wheat flour for added structure and texture, offeringa robust taste.",
-      imageSrc: "images/rye-bread.jpg",
+      imageUrl: "images/rye-bread.jpg",
     },
     {
       id: 6,
       title: "Multigrain Bread",
       description:
         "Hearty bread made with a variety of grains, giving it a rich, nutty flavor and texture. Multigrain bread can vary in its composition, offering additional nutrients.",
-      imageSrc: "images/multigrain.jpg",
+      imageUrl: "images/multigrain.jpg",
     },
   ];
 
   // state management
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isClient, setIsClient] = useState(false);
   const [cardsPerView, setCardsPerView] = useState(3);
   const totalCards = cards.length;
+  // const [cardsImage, setCardsImage] = useState(cards);
+
+  // fetch data image from API (didn't work)
+  // useEffect (() => {
+  //   async function fetchImage() {
+  //     try {
+  //       const response = await fetch("http://localhost:4000/products");
+  //       const data = await response.json();
+
+  //       setCardsImage(prevCards => prevCards.map((card, index) => ({
+  //         ...card,
+  //         imgUrl: data[index] || "",
+  //       })));
+  //     } catch (error) {
+  //       console.error("Error fetching images:", error);
+  //     }
+  //   }
+  //   fetchImages();
+  // }, []);
 
   //   check if we're in a browser environment
   useEffect(() => {
@@ -117,7 +137,7 @@ export default function CardCarousel() {
               >
                 <div className="bg-card-background rounded-lg h-full overflow-hidden">
                   <img
-                    src={card.imageSrc}
+                    src={card.imageUrl}
                     alt={card.title}
                     className="object-cover w-full h-40"
                   />
