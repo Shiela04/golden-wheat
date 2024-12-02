@@ -34,42 +34,6 @@ export default function Card() {
           <GroupCards />
         </div>
       </div>
-
-      {/* Pastry Section */}
-      {/* <div>
-        <h2 className="py-16 text-4xl font-bold text-center">Pastries</h2>
-        <div className="grid grid-cols-1 gap-10 p-4 sm:grid-cols-2 md:grid-cols-3">
-          {pastries.length > 0 ? (
-            pastries.map((product) => (
-              <Link href={`/products/${product._id}`} key={product._id}>
-                <div className="cursor-pointer">
-                  <Cards data={product} />
-                </div>
-              </Link>
-            ))
-          ) : (
-            <p className="text-center text-white">Loading products...</p>
-          )}
-        </div>
-      </div> */}
-
-      {/* Bun Section */}
-      {/* <div>
-        <h2 className="py-16 text-4xl font-bold text-center">Buns</h2>
-        <div className="grid grid-cols-1 gap-10 p-4 sm:grid-cols-2 md:grid-cols-3">
-          {buns.length > 0 ? (
-            buns.map((product) => (
-              <Link href={`/products/${product._id}`} key={product._id}>
-                <div className="cursor-pointer">
-                  <Cards data={product} />
-                </div>
-              </Link>
-            ))
-          ) : (
-            <p className="text-center text-white">Loading products...</p>
-          )}
-        </div>
-      </div> */}
     </div>
   );
 }
