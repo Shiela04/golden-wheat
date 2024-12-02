@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function RegistrationForm() {
-  const router = useRouter();
+  // const router = useRouter();
   // Add state for username and usernameErrorText
   const [userName, setUserName] = useState("");
   const [userNameErrorText, setUserNameErrorText] = useState("");
