@@ -48,6 +48,7 @@ export default function IndividualProductPage({ params }) {
   // add product to wishlist
   const handleAddToWishlist = (product) => {
     let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    // check if item already exists in wishlist
     if (!wishlist.some((item) => item.id === product.id)) {
       wishlist.push(product);
       localStorage.setItem("wishlist", JSON.stringify(wishlist));
@@ -60,7 +61,7 @@ export default function IndividualProductPage({ params }) {
         <img
           src={product.imageUrl}
           alt={product.name}
-          className="w-64 h-64 mx-auto mt-6 mb-4 rounded-md"
+          className="w-64 h-64 mx-auto mt-6 mb-4 rounded-md border border-white"
         />
         <h1 className="text-2xl text-center">{product.name}</h1>
         <p className="text-lg text-center">{product.description}</p>

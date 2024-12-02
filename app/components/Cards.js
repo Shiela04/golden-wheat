@@ -7,7 +7,7 @@ export default function Cards({ name, description, price, imageUrl, _id }) {
     <div>
       <div
         key={_id}
-        className="flex flex-col items-stretch justify-center max-w-sm mx-auto overflow-hidden border border-white rounded-lg shadow-lg bg-card-background max-h-fit]"
+        className="flex flex-col items-stretch justify-center max-w-sm mx-auto overflow-hidden border border-white rounded-lg shadow-lg bg-card-background hover:scale-105"
       >
         {/* Card Image */}
         <img className="object-cover w-full h-48" src={imageUrl} alt={name} />

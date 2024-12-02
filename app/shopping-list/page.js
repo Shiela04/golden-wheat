@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ShoppingList() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center h-[70vh]">
       <h1 className="mt-6 mb-6 font-bold text-center lg:text-5xl md:text-3xl">
         Shopping List
       </h1>

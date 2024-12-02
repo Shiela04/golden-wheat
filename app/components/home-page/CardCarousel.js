@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from "react";
 
@@ -102,9 +103,12 @@ export default function CardCarousel() {
   const transform = -(currentIndex * 100) / totalCards;
 
   return (
-    <div className="justify-center relative p-4 w-full max-w-full overflow-hidden bg-black">
+    <div className="relative mb-10 p-4 w-full max-w-full overflow-hidden bg-black">
+      <h1 className="flex justify-center text-2xl lg:text-4xl font-bold text-white my-10">
+        Breads
+      </h1>
       {isClient && (
-        <div className="justify-center px-8">
+        <div className="px-8">
           <div
             className="flex gap-3 justify-center transition-transform duration-300 px-2"
             style={{
@@ -112,9 +116,10 @@ export default function CardCarousel() {
             }}
           >
             {displayedCards.map((card) => (
-              <div
+              <Link
+                href={`/products`}
                 key={card.id}
-                className="justify-center w-full border border-white rounded-lg max-w-96 sm:w-1/2 md:w-1/3 lg:w-1/4"
+                className="justify-center w-full border border-white rounded-lg max-w-96 sm:w-1/2 md:w-1/3 lg:w-1/4 hover:scale-105"
               >
                 <div className="bg-card-background rounded-lg h-full overflow-hidden">
                   <img
@@ -131,21 +136,21 @@ export default function CardCarousel() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
           {/* buttons */}
           <button
             onClick={goPrev}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full hover:bg-custom-lime hover:text-black hover:font-extrabold"
             disabled={false}
           >
             &lt;
           </button>
           <button
             onClick={goNext}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full hover:bg-custom-lime hover:text-black hover:font-extrabold"
             disabled={false}
           >
             &gt;

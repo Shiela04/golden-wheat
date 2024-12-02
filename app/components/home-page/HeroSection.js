@@ -13,7 +13,7 @@ export default function HeroSection() {
       </div>
       <div className="flex flex-col items-center justify-between xl:justify-center w-full h-full gap-4 p-8 text-center text-black bg-card-beige md:w-2/5 lg:w-1/3">
         <h1 className="py-2 xl:py-4 text-2xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl xlg:text-5xl">
-          Delicious Recipes
+          Welcome to Golden Wheat Bakery
         </h1>
         <p className="text-lg sm:text-xl md:text-base max-w-3xl mx-auto lg:text-xl xl:leading-relaxed">
           Indulge in the goodness of freshly baked bread, made with the finest
