@@ -16,7 +16,7 @@ export default function Card() {
       </h1>
 
       {/* Description */}
-      <div className="px-40 lg:px-96">
+      <div className="px-20 md:px-40 lg:px-96">
         <p className="mb-6 font-semibold text-center text-md">
           Welcome to Our Bakery! Discover the joy of freshly baked bread,
           pastries, and buns, made with love and the finest ingredients. From

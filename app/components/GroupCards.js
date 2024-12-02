@@ -32,9 +32,9 @@ export default function GroupCards() {
 
   return (
     <div className="p-4">
-      <div className="flex">
+      <div className="flex h-full">
         {/* <h2 className="text-4xl font-bold text-center py-14">Breads</h2> */}
-        <div className="grid grid-cols-1 gap-10 p-4 sm:grid-cols-2 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-10 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 min-h-full">
           {products ? (
             products.map((product) => (
               <Link href={`/products/${product._id}`} key={product._id}>

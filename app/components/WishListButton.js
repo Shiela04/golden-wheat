@@ -8,7 +8,7 @@ export default function WishListButton() {
     >
       <span className="absolute -inset-1.5" />
       <span className="sr-only">View Wishlist</span>
-      <i className="fas fa-heart text-2xl " tabIndex={0} />
+      <i className="fas fa-heart text-2xl text-white" tabIndex={0} />
     </button>
   );
 }

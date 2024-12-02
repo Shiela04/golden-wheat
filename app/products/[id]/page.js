@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function IndividualProductPage({ params }) {
@@ -44,18 +45,43 @@ export default function IndividualProductPage({ params }) {
     );
   }
 
+  // add product to wishlist
+  const handleAddToWishlist = (product) => {
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    if (!wishlist.some((item) => item.id === product.id)) {
+      wishlist.push(product);
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    }
+  };
+
   return (
-    <div className="items-center ">
-      <img
-        src={product.imageUrl}
-        alt={product.name}
-        className="w-64 h-64 mx-auto mt-6 mb-4 rounded-md"
-      />
-      <h1 className="text-2xl text-center">{product.name}</h1>
-      <p className="text-lg text-center">{product.description}</p>
-      <p className="mb-6 text-lg font-bold text-center">
-        Price: ${product.price}
-      </p>
+    <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center ">
+        <img
+          src={product.imageUrl}
+          alt={product.name}
+          className="w-64 h-64 mx-auto mt-6 mb-4 rounded-md"
+        />
+        <h1 className="text-2xl text-center">{product.name}</h1>
+        <p className="text-lg text-center">{product.description}</p>
+        <p className="mb-3 text-lg font-bold text-center">
+          Price: ${product.price}
+        </p>
+        <button
+          onClick={() => handleAddToWishlist}
+          className="p-2 bg-custom-red rounded-2xl font-bold hover:bg-white hover:text-black"
+        >
+          Add to Wishlist
+        </button>
+      </div>
+      {/* link to wishlist page */}
+
+      <Link
+        href={`/wishlist`}
+        className="my-4 p-2 font-semibold hover:bg-white hover:text-black hover:rounded-2xl"
+      >
+        Go to Wishlist
+      </Link>
     </div>
   );
 }
