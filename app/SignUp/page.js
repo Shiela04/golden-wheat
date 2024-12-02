@@ -1,6 +1,6 @@
 "use client";
 
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function RegistrationForm() {
@@ -134,13 +134,13 @@ export default function RegistrationForm() {
     setConfrimPassword("");
     setEmail("");
 
-    // Optionally, reset the error messages as well
+    // Reset the error messages
     setUserNameErrorText("");
     setPasswordErrorText("");
     setConfrimPasswordErrorText("");
     setEmailErrorText("");
-    setShowPopUp(true); // Shows the popup after the from is submitted and if successful
-    setTimeout(() => setShowPopUp(false), 8000); // Popup will disapear after a couple of seconds if user does not close it
+    setShowPopUp(true);
+    setTimeout(() => setShowPopUp(false), 8000);
   };
   return (
     <div className="bg-card-beige text-white min-h-screen flex justify-center items-center p-4">
