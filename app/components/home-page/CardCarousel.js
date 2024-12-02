@@ -55,25 +55,6 @@ export default function CardCarousel() {
   const [isClient, setIsClient] = useState(false);
   const [cardsPerView, setCardsPerView] = useState(3);
   const totalCards = cards.length;
-  // const [cardsImage, setCardsImage] = useState(cards);
-
-  // fetch data image from API (didn't work)
-  // useEffect (() => {
-  //   async function fetchImage() {
-  //     try {
-  //       const response = await fetch("http://localhost:4000/products");
-  //       const data = await response.json();
-
-  //       setCardsImage(prevCards => prevCards.map((card, index) => ({
-  //         ...card,
-  //         imgUrl: data[index] || "",
-  //       })));
-  //     } catch (error) {
-  //       console.error("Error fetching images:", error);
-  //     }
-  //   }
-  //   fetchImages();
-  // }, []);
 
   //   check if we're in a browser environment
   useEffect(() => {

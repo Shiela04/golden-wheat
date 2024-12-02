@@ -12,7 +12,7 @@ export default function TeamMembers() {
         <img
           src="../images/ethan.jpg"
           alt="ethan"
-          className="w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full justify-center"
+          className="w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full justify-center object-cover"
         ></img>
         {/* Name */}
         <h2 className="text-center text-2xl font-bold md:text-3xl md:font-extrabold lg:text-4xl p-4">
@@ -36,7 +36,7 @@ export default function TeamMembers() {
           <img
             src="../images/chai.jpg"
             alt="chai"
-            className="w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full justify-center"
+            className="w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full justify-center object-cover"
           ></img>
           {/* Name */}
           <h2 className="text-center text-2xl font-bold md:text-3xl md:font-extrabold lg:text-4xl p-4">
@@ -59,7 +59,7 @@ export default function TeamMembers() {
           <img
             src="../images/aashita.jpg"
             alt="aashita"
-            className="w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full justify-center"
+            className="w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full justify-center object-cover"
           ></img>
           {/* Name */}
           <h2 className="text-center text-2xl font-bold md:text-3xl md:font-extrabold lg:text-4xl p-4">
@@ -84,7 +84,7 @@ export default function TeamMembers() {
           <img
             src="../images/mo.jpg"
             alt="mo"
-            className="w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full justify-center"
+            className=" w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full justify-center object-cover"
           ></img>
           {/* Name */}
           <h2 className="text-center text-2xl font-bold md:text-3xl md:font-extrabold lg:text-4xl p-4">
@@ -107,7 +107,7 @@ export default function TeamMembers() {
           <img
             src="../images/shiela.jpg"
             alt="shiela"
-            className="w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full justify-center"
+            className="w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full justify-center object-cover"
           ></img>
           {/* Name */}
           <h2 className="text-center text-2xl font-bold md:text-3xl md:font-extrabold lg:text-4xl p-4">

@@ -3,7 +3,11 @@ export default function AboutHeroSection() {
   return (
     <div>
       <div>
-        <img src="../images/team.jpg" alt="team" />
+        <img
+          src="../images/team.jpg"
+          alt="team"
+          className="lg:h-[80vh] w-full h-full object-cover"
+        />
       </div>
       <div className="flex flex-col md:flex-row lg:flex-row justify-between bg-card-beige text-black">
         <div className="flex flex-w-1/2 w-full flex-col justify-center items-center p-5 border-b border-black md:border-r lg:border-r xl:border-r">
