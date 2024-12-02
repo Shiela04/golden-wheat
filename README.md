@@ -27,31 +27,6 @@ Step-by-step guide on how to install and set up the Golden Wheat project on a lo
 
 5. Open `http://localhost:3000` in your browser.
 
-### Installation Instructions (Backend)
-
-1. Clone the repository: Open your terminal and run the following command to clone the repository: git clone https://github.com/chai-py/cpnt262-the-golden-wheat
-
-2. Navigate to the project directory: cd cpnt262-the-golden-wheat
-
-3. Install dependencies: npm install
-
-4. Install additional dependencies: npm install express mongoose dotenv
-
-5. Set up MongoDB connection: Copy your Mongo URI and add it to your .env file in the project root. Your .env file should look like this: MONGO_URI=your-mongo-uri-here
-
-6. Start the backend server: node app.js
-
-7. Verify the API: Open your browser and navigate to the API endpoint: http://localhost:4000/products
-
-8. Use the API on the Frontend: Once the backend server is running, the frontend can now make API calls to these endpoints:
-
-- http://localhost:4000/products
-- http://localhost:4000/user/login
-- http://localhost:4000/user/registration
-- http://localhost:4000/order
-
-Add these endpoints to the frontend environment to fetch and display data as needed.
-
 ### Additional Notes:
 
 - Ensure that MongoDB is running and properly connected to the backend.
