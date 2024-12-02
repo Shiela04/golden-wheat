@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Cookies from "js-cookie";
+import Router from "next/router";
 
 export default function RegistrationForm() {
   // Add state for username and usernameErrorText
@@ -94,8 +96,8 @@ export default function RegistrationForm() {
       const response = await fetch("http://localhost:4000/user/login", {
         method: "POST",
         body: JSON.stringify({
-          email: "ethan456@goldenbakery.ca",
-          password: "password12345",
+          email: email,
+          password: password,
         }),
         headers: {
           "Content-Type": "application/json",
@@ -107,15 +109,25 @@ export default function RegistrationForm() {
       console.log("data", responsedata);
     } catch (error) {
       console.error("Erorr fethcing data");
+
+      if (responsedata.message === "User created succesfully") {
+        Cookies.set("userToken", responsedata.token, { expires: 7 });
+        Cookies.set("name", userName, { expires: 7 });
+        localStorage.setItem("isLoggedIn", true);
+        setFormDataToShow(data.message);
+        Router.push("/");
+      } else {
+        console.error("Error:", responsedata.message);
+      }
     }
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen p-4 text-white bg-black">
+    <div className="flex items-center justify-center min-h-screen p-4 text-white bg-card-beige">
       <div className="flex flex-wrap justify-center w-full gap-8 lg:flex-nowrap">
         {/* Form Section */}
-        <div className="w-full max-w-md p-6 bg-gray-800 rounded-lg shadow-lg">
-          <h1 className="mb-6 text-2xl font-bold text-center text-blue-500">
+        <div className="w-full max-w-md p-6 bg-charcoal-gray rounded-lg shadow-lg">
+          <h1 className="mb-6 text-2xl font-bold text-center text-yellow-500">
             Log In
           </h1>
           <form onSubmit={handleSubmit} className="space-y-4">

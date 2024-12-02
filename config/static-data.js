@@ -11,11 +11,3 @@ export const HEADER_DETAILS = {
     { navText: "Sign Up", navUrl: "/signup" },
   ],
 };
-
-export const HERO_DETAILS = {
-  heroHeading: "Travel top destination of the world",
-  heroParagraph:
-    "We always make our customer happy by providing as many choices as possible",
-  heroButtonMain: "Get Started",
-  heroButtonSecondary: "Watch Demo",
-};

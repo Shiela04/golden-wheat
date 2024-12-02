@@ -68,8 +68,8 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="space-y-6">
-          <div>
+        <div className="grid lg:grid-cols-2 gap-4 lg:w-2/3 lg:gap-20 justify-between items-center">
+          <div className="flex flex-col h-full">
             <h3 className="flex items-center space-x-2 text-lg font-medium">
               <span>🌱</span>
               <span>100% Organic</span>
@@ -80,20 +80,19 @@ export default function Footer() {
               sustainability, and a healthier option for our customers.
             </p>
           </div>
-          <div>
+          <div className="flex flex-col h-full">
             <h3 className="flex items-center space-x-2 text-lg font-medium">
               <span>🧵</span>
               <span>Handmade</span>
             </h3>
             <p className="mt-2 text-sm">
-              At The Golden Wheat Bakery, all our products are handmade with
-              care, ensuring every bite is crafted to perfection.
+              At The Golden Wheat Bakery, we take pride in handcrafting every
+              product with care, ensuring that each bite is a testament to our
+              dedication to quality and flavor.
             </p>
           </div>
-        </div>
 
-        <div className="space-y-6">
-          <div>
+          <div className="flex flex-col h-full">
             <h3 className="flex items-center space-x-2 text-lg font-medium">
               <span>👥</span>
               <span>About Us</span>
@@ -104,7 +103,7 @@ export default function Footer() {
               organic ingredients.
             </p>
           </div>
-          <div>
+          <div className="flex flex-col h-full">
             <h3 className="flex items-center space-x-2 text-lg font-medium">
               <span>🍞</span>
               <span>Our Products</span>
@@ -117,7 +116,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-[#a67358] text-center py-4">
+      <div className="bg-custom-nav-brown text-center py-4">
         <p className="text-sm text-white">Wheat Bakery © 2024</p>
       </div>
     </footer>
