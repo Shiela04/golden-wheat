@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function RegistrationForm() {
@@ -128,6 +128,7 @@ export default function RegistrationForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     validateForm();
+
     // Reset the form fields
     setUserName("");
     setPassword("");
@@ -277,8 +278,7 @@ export default function RegistrationForm() {
               </h2>
               <p className="text-black">
                 Your Account has been successfully made. We will send a
-                notification to your email adress to comfrim your account, you
-                filthy anaimal!
+                notification to your email adress to comfrim your account!
               </p>
               <button
                 className="mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-700"
