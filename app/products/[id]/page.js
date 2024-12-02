@@ -49,11 +49,13 @@ export default function IndividualProductPage({ params }) {
       <img
         src={product.imageUrl}
         alt={product.name}
-        className="w-64 h-64 mx-auto mb-4 rounded-md"
+        className="w-64 h-64 mx-auto mt-6 mb-4 rounded-md"
       />
       <h1 className="text-2xl text-center">{product.name}</h1>
       <p className="text-lg text-center">{product.description}</p>
-      <p className="text-lg font-bold text-center">Price: ${product.price}</p>
+      <p className="mb-6 text-lg font-bold text-center">
+        Price: ${product.price}
+      </p>
     </div>
   );
 }
