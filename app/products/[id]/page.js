@@ -45,11 +45,11 @@ export default function IndividualProductPage({ params }) {
   }
 
   return (
-    <div className="text-center">
+    <div className="items-center ">
       <img
         src={product.imageUrl}
         alt={product.name}
-        // className="w-64 h-64 mx-auto mb-4 rounded-md"
+        className="w-64 h-64 mx-auto mb-4 rounded-md"
       />
       <h1 className="text-2xl text-center">{product.name}</h1>
       <p className="text-lg text-center">{product.description}</p>
